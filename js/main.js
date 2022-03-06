@@ -158,19 +158,23 @@ $(document).ready(function(){
         $(".main-nav").removeClass("scrolled");
       }
 
-      let start = $("#meal-ba-slider").offset().top - 400;
-      let length = $("#meal-ba-slider").height() + 200;
-      let handle = $("#meal-ba-slider #ba-handle")
-      let fg = $("#meal-ba-slider .fg-img")
-      let finish = start + length;
-      if (scrollpos >= start && scrollpos < finish){
-        
-        let p = (scrollpos-start)/(length)*100
-        handle.val(p).trigger("change")
-        fg.css('width', `${p}%`);
-        
+      $(".ba-slider").each(function(){
+        let cur = $(this)
+        let start = cur.offset().top - 400;
+        let length = cur.height() + 200;
+        let handle = $("#ba-handle", cur)
+        let fg = $(".fg-img", cur)
+        let finish = start + length;
+        if (scrollpos >= start && scrollpos < finish){
+          
+          let p = (scrollpos-start)/(length)*100
+          handle.val(p).trigger("change")
+          fg.css('width', `${p}%`);
+          
 
-      }
+        }
+      })
+      
 
     });
 
