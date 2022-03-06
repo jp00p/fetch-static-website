@@ -556,6 +556,10 @@ img {
   }
 }
 
+.feature .nutrition-info {
+  width: 100%;
+}
+
 .ingredients .intro {
   padding: 0 3rem 3rem 3rem;
 }
