@@ -629,11 +629,9 @@ img { max-width:100%; }
 .ba-slider {
     display:block;
     position:relative;
-    width:100%;
-    min-width:800px;
+    width:800px;
     background:#000;
-    height:100%;
-    min-height:600px;
+    height:600px;
     margin:0 auto;
     .img {
         position:absolute;
@@ -672,12 +670,29 @@ img { max-width:100%; }
             -webkit-appearance: none;
             appearance: none;
             width: 10px;
-            height: 600px;
+            height: 640px;
             background: white;
             cursor: pointer;
         }
     }
-    
+    @media screen and (max-width:800px){
+        width:640px;
+        height:480px;
+        .handle {
+            &::-webkit-slider-thumb {
+                height:480px;
+            }
+        }
+    }
+    @media screen and (max-width:640px){
+        width:320px;
+        height:280px;
+        .handle {
+            &::-webkit-slider-thumb {
+                height:280px;
+            }
+        }
+    }
 }
 
 .carousel-section {
