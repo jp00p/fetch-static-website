@@ -1,5 +1,6 @@
 <nav class="main-nav">
     <div class="wrapper desktop">
+
         <div class="logo">
             <style>
                 svg{
@@ -11,6 +12,7 @@
                     opacity: 0;
                 }</style>
             <div id='animationWrapper' class='center'>
+                <a href="/">
                 <svg version="1.1" id="mouseAn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="100" viewBox="0 0 1080 1080" enable-background="new 0 0 1080 1080" xml:space="preserve">
                 <g>
@@ -370,6 +372,7 @@
                 <path id="box2" fill="#EDBF3D" d="M629.17,911.3c40.81,0,65.77-3.3,109.74-47.96l20.34-72.8c-25.01,7.26-42.61,10.6-60.42,4.03
                     c-6.39,19.23-14.69,32.25-29.54,47.15C662.14,864.87,650.57,888.02,629.17,911.3z"/>
                 </svg>
+            </a>
                 
                 </div>
                 <script src="https://dfrnc.com/lib/morph3.min.js"></script>
@@ -435,12 +438,13 @@
                     .to('#eye-mid2', { duration: 0.1, transformOrigin: '50% 0%', scale: 1, }, '<+0.1')
                 </script>
         </div>
+
         <ul class="nav-menu">
-            <li><a href="#">home</a></li>
-            <li><a href="#">nutrition</a></li>
-            <li><a href="#">about</a></li>
+            <li><a href="/">home</a></li>
+            <li><a href="/nutrition">nutrition</a></li>
+            <li><a href="/about">about</a></li>
             <li><a href="#">reviews</a></li>
-            <li><a href="#" class="button">shop fresh</a></li>
+            <li><a href="/product" class="button">shop fresh</a></li>
         </ul>
 
         <ul class="utility-menu">
@@ -456,7 +460,7 @@
         </div>
 
         <div class="logo">
-            <img src="images/mobile-logo.png" width="66">
+            <img src="/images/mobile-logo.png" width="66">
         </div>
 
         <ul class="utility-menu">
@@ -468,10 +472,10 @@
 <div class="mobile-menu">
     <div class="menu">
         <ul>
-            <li class="active"><a href="#">home</a></li>
-            <li><a href="#">nutrition</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">reviews</a></li>
+            <li class="active"><a href="/">home</a></li>
+            <li><a href="/nutrition">nutrition</a></li>
+            <li><a href="/about">about</a></li>
+            <li><a href="/product">product</a></li>
         </ul>
     </div>
 </div>

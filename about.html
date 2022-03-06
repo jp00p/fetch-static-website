@@ -1,49 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch 2022 - About</title>
-    <link rel="stylesheet" href="https://use.typekit.net/cwz5rlh.css">
-    
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-</head>
-<body>
+{% include "partials/html.liquid" %}
 
-    <nav class="main-nav">
-        <div class="wrapper">
-            <div class="logo wow animate__tada" data-wow-delay="3s">
-                <img src="images/logo.png" width="300">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#">home</a></li>
-                <li><a href="#">nutrition</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">reviews</a></li>
-                <li><a href="#" class="button">shop fresh</a></li>
-            </ul>
+{% include "./partials/nav.liquid" %}
 
-            <ul class="utility-menu">
-                <li><a href="#"><img src="images/shopping-cart.png"></a></li>
-                <li><a href="#"><div class="account-button"></div></a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="banner-promo">
-        <div class="wrapper">
-            <div><strong>Save 70% off your first order</strong> with subscription</div>
-        </div>
-    </div>
+{% include "./partials/promo-bar.liquid" %}
 
     <div class="hero yellow-bg">
         <div class="wrapper">
-            <div class="image" style="background-image: url(images/hero2.png);">
-                <img src="images/hero2.png">
+            <div class="image" style="background-image: url(/images/hero2.png);">
+                <img src="/images/hero2.png">
             </div>
             <div class="content">
                 <div class="text">
@@ -62,16 +26,16 @@
                     <p class="white">We envision a future where every bowl is filled with love and every dog is seen as a true member of the family.</p>
                 </div>
             </div>
-            <div class="image" style="background-image: url(images/hero2.png);">
-                <img src="images/hero.png">
+            <div class="image" style="background-image: url(/images/hero2.png);">
+                <img src="/images/hero.png">
             </div>
         </div>
     </div>
 
     <div class="hero dog-story">
         <div class="wrapper">
-            <div class="image" style="background-image: url(images/circle-dog.png); background-position:-5vw 50%;">
-                <img src="images/circle-dog.png">
+            <div class="image" style="background-image: url(/images/circle-dog.png); background-position:-5vw 50%;">
+                <img src="/images/circle-dog.png">
             </div>
             <div class="content">
                 <div class="text">
@@ -98,7 +62,7 @@
                 </div>
                 
                 <div class="right wow animate__fadeInRight">
-                    <img src="images/circle-dog.png">
+                    <img src="/images/circle-dog.png">
                 </div>
 
             </div>
@@ -107,7 +71,7 @@
             <div class="entry">
 
                 <div class="left wow animate__fadeInLeft">
-                    <img src="images/circle-dog.png">
+                    <img src="/images/circle-dog.png">
                 </div>
                 
                 <div class="dot">
@@ -137,7 +101,7 @@
                 </div>
                 
                 <div class="right wow animate__fadeInRight">
-                    <img src="images/circle-dog.png">
+                    <img src="/images/circle-dog.png">
                 </div>
 
             </div>
@@ -146,7 +110,7 @@
             <div class="entry">
 
                 <div class="left wow animate__fadeInLeft">
-                    <img src="images/circle-dog.png">
+                    <img src="/images/circle-dog.png">
                 </div>
                 
                 <div class="dot">
@@ -167,8 +131,8 @@
 
     <div class="hero yellow-bg">
         <div class="wrapper">
-            <div class="image" style="background-image: url(images/hero2.png);">
-                <img src="images/hero2.png">
+            <div class="image" style="background-image: url(/images/hero2.png);">
+                <img src="/images/hero2.png">
             </div>
             <div class="content">
                 <div class="text">
@@ -188,86 +152,11 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae quam culpa, repellendus sit quo labore nostrum ullam fuga corporis optio ex similique, dolor perferendis sint accusamus velit suscipit placeat?</p>
             </div>
             <div class="image wow animate__fadeIn">
-                <img src="images/team.jpg">
+                <img src="/images/team.jpg">
             </div>
         </div>
     </div>
 
+    {% include "partials/footer.liquid" %}
 
-    <div class="footer-top">
-        <img src="images/footer-dogs.png">
-    </div>
-
-
-    <div class="main-footer green-bg">
-        <div class="wrapper">
-
-            <div class="nav-column">
-                <h3>Site Map</h3>
-                <ul>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-column">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="#"><img src="images/mail-icon.png"> link</a></li>
-                    <li><a href="#"><img src="images/mail-icon.png"> link</a></li>
-                    <li><a href="#"><img src="images/mail-icon.png"> link</a></li>
-                    <li><a href="#"><img src="images/mail-icon.png"> link</a></li>
-                </ul>
-            </div>
-
-            <div class="news-column">
-                <h3>Join our newsletter</h3>
-                <form>
-                    <input type="text" name="email">
-                </form>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="wrapper">
-            <div class="credits">
-                2022 PDX FETCH, Inc.
-            </div>
-            <div class="utility-nav">
-                <ul>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Do Not Sell My Personal Information</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/plugins/before-after.min.js"></script>
-    <script src="js/plugins/wow.min.js"></script>
-    <script>
-        var wow = new WOW(
-        {
-            boxClass:     'wow',      // animated element css class (default is wow)
-            animateClass: 'animate__animated', // animation css class (default is animated)
-            offset:       0,          // distance to the element when triggering the animation (default is 0)
-            mobile:       true,       // trigger animations on mobile devices (default is true)
-            live:         true,       // act on asynchronously loaded content (default is true)
-            scrollContainer: null,    // optional scroll container selector, otherwise use window,
-            resetAnimation: true,     // reset animation on end (default is true)
-        }
-        );
-        wow.init();
-    </script>
-    <script src="js/main.js" defer></script>
-    
-</body>
-</html>
+    {% include "partials/end.liquid" %}

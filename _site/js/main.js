@@ -76,6 +76,14 @@ $(document).ready(function(){
 
     $('#dog-activity').on('input', function(){
       $("#activity-label").text(activity_levels[$("#dog-activity").val()])
+    });
+
+    $(".product-feature-nav button").on("click", function(e){
+      let target = "#" + $(this).data("for")
+      $(".product-feature-nav button").removeClass("active")
+      $(this).addClass("active")
+      $(".product-features .feature").removeClass("active")
+      $(target).addClass("active")
     })
 
     $('.meal-selector-button').on('click', function(e){
@@ -102,6 +110,17 @@ $(document).ready(function(){
       $(".loaf-slider #"+section+" .loaf-features:first").addClass("active")
       initSliders();  
     });
+
+    $(".faqs .entry").on("click", function(e){
+      $(this).toggleClass("active");
+      if($("i", this).hasClass("fa-caret-down")){
+        $("i", this).addClass("fa-caret-up");
+        $("i", this).removeClass("fa-caret-down");
+      } else {
+        $("i", this).removeClass("fa-caret-up");
+        $("i", this).addClass("fa-caret-down");
+      }
+    })
 
     $("#review-carousel").slick({
       slidesToShow: 3,

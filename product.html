@@ -1,46 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <title>Fetch 2022</title>
-    <script src="https://kit.fontawesome.com/074e3ff602.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/cwz5rlh.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
-</head>
-<body>
+{% include "partials/html.liquid" %}
 
-    
+{% include "./partials/nav.liquid" %}
 
-    <div class="banner-promo">
-        <div class="wrapper">
-            <div><a href="#"><strong>Save 70% off your first order</strong> with subscription <img src="images/small-arrow.png"></a></div>
-        </div>
-    </div>
+{% include "./partials/promo-bar.liquid" %}
 
     <div class="single-product">
         <div class="wrapper">
 
             <div class="product-hero">
                 <div class="image">
-                    <img src="images/food-bowl.png">
+                    <img src="/images/food-bowl.png">
                 </div>
                 <div class="content">
                     <h1>Beef Puploaf</h1>
                     <p>This recipe is packed with nutrients, starting with our ground beef sourced from Pacific Northwest Farms</p>
-                    <img src="images/green-stars.png" width="166">
+                    <img src="/images/green-stars.png" width="166">
                     <div class="review-data">
                         <span>4.8/5 stars</span>
                         <span>|</span>
@@ -50,117 +24,7 @@
             </div>
 
             <div class="product-calculator">
-                <div class="calc-form">
-                    <form method="GET">
-                        <div class="column">
-                            <div class="form-input">
-                                <label>
-                                    <div>What is your dog's name?</div>
-                                    <input type="text" id="dog-name">
-                                </label>
-                            </div>
-                            <div class="form-input" id="zip-input">
-                                <label>
-                                    <div>What is your zip code?</div>
-                                    <input type="number" id="zipcode">
-                                </label>
-                                <div class="error-text"></div>
-                            </div>
-                            <div class="form-input">
-                                <label>
-                                    <div>How old is your dog?</div>
-                                    <input type="range" min="1" max="30" id="dog-age">
-                                </label>
-                                <span id="age-label">1 years</span>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="form-input">
-                                <label>
-                                    <div>What kind of dog?</div>
-                                    <input type="text">
-                                </label>
-                            </div>
-                            <div class="form-input" id="weight-input">
-                                <label>
-                                    <div>How much does your dog weigh?</div>
-                                    <input type="number" min="1" max="250" id="dog-weight">
-                                </label>
-                                <div class="error-text"></div>
-                            </div>
-                            <div class="form-input">
-                                <label>
-                                    <div>How active is your dog?</div>
-                                    <input type="range" min="1" max="4" id="dog-activity">
-                                </label>
-                                <span id="activity-label">Very active</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-input">
-                                <label>
-                                    <div class="text-center">Select recipe</div>
-                                </label>
-                                <div class="meal-selections" id="meal-selections" data-meal-plan="beef">
-                                    <div>
-                                        <a href="#" class="meal-selector-button" data-meal-plan="turkey">
-                                            <img src="images/turkey-icon_off.png" class="off">
-                                            <img src="images/turkey-icon_on.png" class="on">
-                                            <span>Turkey</span>
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="#" class="meal-selector-button active" data-meal-plan="beef">
-                                            <img src="images/beef-icon_off.png" class="off">
-                                            <img src="images/beef-icon_on.png" class="on">
-                                            <span>Beef</span>
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="#" class="meal-selector-button" data-meal-plan="mix">
-                                            <img src="images/mix-icon_off.png" class="off">
-                                            <img src="images/mix-icon_on.png" class="on">
-                                            <span>Mix Pack</span>
-                                        </a>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="meal-plans">
-                            <div class="card popular">
-                                <div class="image">
-                                    <img src="images/card-top.png">
-                                </div>
-                                <div class="content">
-                                    <div class="pricing">
-                                        <h4>Fetch Fresh Plan starting at</h4>
-                                        <h3><span class="green" id="price1">$2.85</span>/day</h3>
-                                        <h4><span class="green" id="total1">$39.90</span>/delivery period</h4>
-                                    </div>
-                                    <p>Our most popular plan is intended to replace your dog's current diet fully with healthy food. Delivered fresh bi-weekly.</p>
-                                    <p>For your dog, a single serving is a 1 1/8 inch slice (45 grams) - 300 calories</p>
-                                    <p><a href="#" class="button white">add to cart</a></p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="image">
-                                    <img src="images/card-top.png">
-                                </div>
-                                <div class="content">
-                                    <div class="pricing">
-                                        <h4>Fetch Fresh Plan starting at</h4>
-                                        <h3><span class="green" id="price2">$2.85</span>/day</h3>
-                                        <h4><span class="green" id="total2">$39.90</span>/delivery period</h4>
-                                    </div>
-                                    <p>Our most popular plan is intended to replace your dog's current diet fully with healthy food. Delivered fresh bi-weekly.</p>
-                                    <p>For your dog, a single serving is a 1 1/8 inch slice (45 grams) - 300 calories</p>
-                                    <p><a href="#" class="button white">add to cart</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                {% include "partials/calculator.liquid" %}
             </div>
 
         </div>
@@ -169,141 +33,245 @@
     
     <div class="product-feature-nav green-bg">
         <div class="wrapper">
-            <button class="button feature-button active">Ingredients</button>
-            <button class="button feature-button">Ingredients</button>
-            <button class="button feature-button">Ingredients</button>
-            <button class="button feature-button">Ingredients</button>
+            <div><button class="button feature-button active" data-for="ingredients">Ingredients</button></div>
+            <div><button class="button feature-button" data-for="nutrition">Nutrition</button></div>
+            <div><button class="button feature-button" data-for="feeding">Feeding Guide</button></div>
+            <div><button class="button feature-button" data-for="faq">FAQ</button></div>
         </div>
     </div>
 
     <div class="product-features mint-bg" id="product-features">
         <div class="wrapper">
 
-            <div class="feature active">
-                <div class="nutrition-info">
-                    <div class="table wow animate__flipInX">
-                        <table>
-                            <tr>
-                                <td width="100%" colspan="2"><strong>Guaranteed Analysis</strong></td>
-                            </tr>
-                            <tr>
-                                <td width="50%">Crude Protein</td>
-                                <td width="50%">Min 10%</td>
-                            </tr>
-                            <tr>
-                                <td width="50%">Crude Fat</td>
-                                <td width="50%">Min 5%</td>
-                            </tr>
-                            <tr>
-                                <td width="50%">Crude Fiber</td>
-                                <td width="50%">Min 2%</td>
-                            </tr>
-                            <tr>
-                                <td width="50%">Moisture</td>
-                                <td width="50%">Max 77%</td>
-                            </tr>
-                            <tr>
-                                <td width="50%"><strong>Calorie Content</strong></td>
-                                <td width="50%"><strong>1,807 kCal/kg</strong></td>
-                            </tr>
-                        </table>
+            <div class="feature active" id="ingredients">
+                <div class="ingredients">
+                    <div class="intro">
+                        <h2>Human-grade ingredients chef-crafted into Puploaf</h2>
+                        <p>INGREDIENTS: Ground Beef, Brown Rice, Sweet Potato, Breadcrumbs, Carrots, Peas, Diced Tomatoes, Apple, Egg, Beef Liver, Apple Cider VInegar, Nutritional Yeast, Rosemary, Chef Canine Complete 2 (Vitamins and Nutrients)</p>
+                    </div>
+                    <div class="nutrition-icons">
+                        {% for i in (1..6) %}
+                        <div class="icon">
+                            <img src="/images/beef-icon_on.png">
+                            <h3>Meat-first recipes</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
 
-            <div class="feature">
-                Feature 1
+            <div class="feature" id="nutrition">
+                <div class="single-product-nutrition">
+                    <div class="intro">
+                        <h2>Beef Puploaf nutritional info</h2>
+                        <div class="loaf-selector">
+                            <div class="icon">
+                                {% include "partials/turkey-icon.liquid" %}
+                                <strong>Turkey</strong>
+                            </div>                        
+                            <div class="icon active">
+                                {% include "partials/beef-icon.liquid" %}
+                                <strong>Beef</strong>
+                            </div>
+                        </div>
+                        <div><p>Choose which nutrition facts you’d like to learn more about.</p></div>
+                        <div class="text"><p><strong>INGREDIENTS:</strong> Ground Beef, Brown Rice, Sweet Potato, Breadcrumbs, Carrots, Peas, Diced Tomatoes, Apple, Egg, Beef Liver, Apple Cider VInegar, Nutritional Yeast, Rosemary, Chef Canine Complete 2 (Vitamins and Nutrients)</p></div>
+                    </div>
+                    <div class="nutrition-info">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <td width="100%" colspan="2"><strong>Guaranteed Analysis</strong></td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">Crude Protein</td>
+                                    <td width="50%">Min 10%</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">Crude Fat</td>
+                                    <td width="50%">Min 5%</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">Crude Fiber</td>
+                                    <td width="50%">Min 2%</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">Moisture</td>
+                                    <td width="50%">Max 77%</td>
+                                </tr>
+                                <tr>
+                                    <td width="50%"><strong>Calorie Content</strong></td>
+                                    <td width="50%"><strong>1,807 kCal/kg</strong></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature feeding-guide" id="feeding">
+                <div class="intro-text">
+                    <h2>Feeding guide</h2>
+                    <p>Enclosed you’ll find the Puploaf you selected, along with a Fetch cutting board (handwash only) to assist with portion control. Based on Vinny’s weight, size and activity level you should cut a <strong>1 1/8 inch slice per meal</strong>, assuming you feed Vinny twice a day. Feed hot or cold!</p>
+                    <p><strong>We suggest a 7 day transition period.</strong> This will allow your dog’s stomach to adjust to the new diet. If you notice your dog’s poop is runny, stay on that transition stage for an extra 2 days, or until their poop is back to normal.</p>
+                </div>
+                <div class="charts">
+                    
+                    <div class="column">
+                        <div class="chart"><div class="quarter"></div></div>
+                        <div class="text">
+                            <p><strong>Day 1-2</strong></p>
+                            <p>
+                                75% old food<br>
+                                25% Puploaf
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="chart"><div class="half"></div></div>
+                        <div class="text">
+                            <p><strong>Day 3-4</strong></p>
+                            <p>
+                                50% old food<br>
+                                50% Puploaf
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="chart"><div class="threequarters"></div></div>
+                        <div class="text">
+                            <p><strong>Day 5-6</strong></p>
+                            <p>
+                                25% old food<br>
+                                75% Puploaf
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="chart"><div class="full"></div></div>
+                        <div class="text">
+                            <p><strong>Day 7+</strong></p>
+                            <p>
+                                100% Puploaf
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
             
-            <div class="feature">
-                Feature 1
+            <div class="feature faq" id="faq">
+                <h2>FAQ</h2>
+
+                <div class="faqs">
+                    {% for i in (1..6) %}
+                    <div class="entry {% if i == 1 %}active{% endif %}">
+                        <div class="question">
+                            <span>What if I have a question that I need answered?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
             
 
         </div>
     </div>
 
-
-
-
-    <div class="footer-top">
-        <div class="wow animate__bounceInUp" data-wow-duration="1s">
-        <img src="images/footer-dogs.jpg">
-        </div>
-    </div>
-
-
-    <div class="main-footer green-bg">
+    <div class="benefits">
         <div class="wrapper">
-
-            <div class="nav-column">
-                <h3>Site Map</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Nutrition</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Shop</a></li>
-                </ul>
+            <div class="intro">
+                <h2>Why Fetch? Benefits you see that they taste</h2>
             </div>
-
-            <div class="nav-column">
-                <h3>Contact</h3>
-                <ul class="contact-links">
-                    <li><a href="#"><img src="images/mail-icon.png">support@pdxfetch.com</a></li>
-                    <li><a href="#"><img src="images/instagram.png">@pdxfetch</a></li>
-                    <li><a href="#"><img src="images/facebook.png">pdxfetch</a></li>
-                    <li><a href="#"><img src="images/phone.png">503.894.5470</a></li>
-                </ul>
+            <div class="cards">
+                {% for i in (1..4) %}
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/hero2.png">
+                    </div>
+                    <div class="content">
+                        <h4>Healthier Pup</h4>
+                        <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-
-            <div class="news-column">
-                <h3>Join our newsletter</h3>
-                <form>
-                    <input type="text" name="email">
-                    <button type="submit"><i class="fa-solid fa-check"></i></button>
-                </form>
-            </div>
-
         </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="hero sky-bg bg-right">
         <div class="wrapper">
-            <div class="credits">
-                2022 PDX FETCH, Inc.
+            <div class="content">
+                <div class="text">
+                    <h2 class="wow animate__flipInX">What's in your first box?</h2>
+                    <ul>
+                        <li>Your choice of puploaf</li>
+                        <li>Your choice of puploaf</li>
+                        <li>Your choice of puploaf</li>
+                        <li>Your choice of puploaf</li>
+                    </ul>
+                </div>
             </div>
-            <div class="utility-nav">
-                <ul>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Do Not Sell My Personal Information</a></li>
-                </ul>
+            <div class="image blue-bg" style="background-image:url(/images/hero2.png)">
+                <img src="/images/hero2.png">
             </div>
         </div>
     </div>
 
+    {% include "partials/carousel.liquid" %}
+
+    <div class="full-reviews">
+        <div class="wrapper">
+            
+            <div class="intro">
+                <h2>Verified customer reviews</h2>
+            </div>
+
+            <div class="reviews">
+                {% for i in (1..10) %}
+                <div class="entry">
+                    <div class="header">
+                        <div class="icon">
+                            <img src="/images/review-icon.png">
+                        </div>
+                        <div class="meta">
+                            <span class="name">Allison R.</span>
+                            <span>Verified Buyer</span>
+                            <img src="/images/green-stars.png" width="150">
+                        </div>
+                        <div class="date">
+                            2/14/2022
+                        </div>
+                    </div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta eius nostrum? Officia veniam nam libero architecto nemo, consectetur consequatur similique laborum praesentium earum totam expedita sunt saepe, assumenda laboriosam!</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="buttons">
+                <a href="#" class="button white">see more</a>
+                <a href="#" class="button white">leave a review</a>
+            </div>
+
+        </div>
+    </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/plugins/before-after.min.js"></script>
-    <script src="js/plugins/wow.min.js"></script>
-    <script>
-        var wow = new WOW(
-        {
-            boxClass:     'wow',      // animated element css class (default is wow)
-            animateClass: 'animate__animated', // animation css class (default is animated)
-            offset:       0,          // distance to the element when triggering the animation (default is 0)
-            mobile:       true,       // trigger animations on mobile devices (default is true)
-            live:         true,       // act on asynchronously loaded content (default is true)
-            scrollContainer: null,    // optional scroll container selector, otherwise use window,
-            resetAnimation: true,     // reset animation on end (default is true)
-        }
-        );
-        wow.init();
-    </script>
-    <script src="js/main.js" defer></script>
     
-</body>
-</html>
+
+
+    
+
+    {% include "partials/footer.liquid" %}
+
+    {% include "partials/end.liquid" %}
