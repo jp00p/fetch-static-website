@@ -1,5 +1,5 @@
 @import url("reset.css");
-@import url("plugins/before-after.min.css");
+//@import url("plugins/before-after.min.css");
 
 $black: #000000;
 $green: #2FD164;
@@ -568,7 +568,6 @@ img { max-width:100%; }
     }
     .slider-wrapper {
         padding:3rem 0;
-        max-width:66%;
         margin:0 auto;
     }
     .loaf-features {
@@ -629,21 +628,56 @@ img { max-width:100%; }
 
 .ba-slider {
     display:block;
+    position:relative;
+    width:100%;
+    min-width:800px;
+    background:#000;
+    height:100%;
+    min-height:600px;
+    margin:0 auto;
+    .img {
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    .bg-image {
+        background-image:url("/images/food2.jpg");
+    }
+    .fg-image {
+        background-image:url("/images/hero2.png");
+        width:5%;
+    }
     .handle {
-        background:#fff;
-        width:20px;
-        margin-left:-10px;
-        box-shadow:0px 0px 14px rgba(0,0,0,0.4);
+        position: absolute;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        //background: rgba(#f2f2f2, .3);
+        outline: none;
+        margin: 0;
+        transition: all .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left:0;
+        &:hover {
+            //background: rgba(#f2f2f2, .1);
+        }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 600px;
+            background: white;
+            cursor: pointer;
+        }
     }
-    .handle:before {
-        background:none;
-    }
-    .handle:after {
-        content:" ";
-        border:none;
-        background:none;
-        box-shadow:none;
-    }
+    
 }
 
 .carousel-section {

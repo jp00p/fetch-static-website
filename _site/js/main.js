@@ -138,12 +138,40 @@ $(document).ready(function(){
       ]
     });
 
+    $(".ba-slider").each(function(e){
+      let p = $(this);
+      
+      $(".handle", this).on("input change", (e)=>{
+        console.log("test")
+        const sliderPos = e.target.value;
+        // Update the width of the foreground image
+        $('.fg-image', p).css('width', `${sliderPos}%`)
+      });
+
+    });
+
     $(window).on("scroll", function(){
-      if($(window).scrollTop() > 640){
+      let scrollpos = $(window).scrollTop();
+      if(scrollpos > 640){
         $(".main-nav").addClass("scrolled");
-      } else if($(window).scrollTop() < 300){
+      } else if(scrollpos < 300){
         $(".main-nav").removeClass("scrolled");
       }
+
+      let start = $("#meal-ba-slider").offset().top - 400;
+      let length = $("#meal-ba-slider").height() + 200;
+      let handle = $("#meal-ba-slider #ba-handle")
+      let fg = $("#meal-ba-slider .fg-img")
+      let finish = start + length;
+      if (scrollpos >= start && scrollpos < finish){
+        
+        let p = (scrollpos-start)/(length)*100
+        handle.val(p).trigger("change")
+        fg.css('width', `${p}%`);
+        
+
+      }
+
     });
 
     // $(".loaf-feature-slider").each(function(){
@@ -172,21 +200,6 @@ $(document).ready(function(){
     // })
 
   });
-  
-
-  $(window).resize(function(){
-    // initSliders();
-  });
-
-  
-
-function initSliders(){
-  // $('.ba-slider').each(function(){
-  //   var cur = $(this);
-  //   var width = cur.width()+'px';
-  //   cur.find('.resize img').css('width', width);
-  // });
-}
 
 function checkZip(zip){
   let zipcodes = ['12345', '97201', '98663'];
@@ -196,95 +209,24 @@ function checkZip(zip){
   return false;
 }
   
-function drags(dragElement, resizeElement, container) {
-	
-    // Initialize the dragging event on mousedown.
-    dragElement.on('mousedown touchstart', function(e) {
-      
-      dragElement.addClass('draggable');
-      resizeElement.addClass('resizable');
-      
-      // Check if it's a mouse or touch event and pass along the correct value
-      var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-      
-      // Get the initial position
-      var dragWidth = dragElement.outerWidth(),
-          posX = dragElement.offset().left + dragWidth - startX,
-          containerOffset = container.offset().left,
-          containerWidth = container.outerWidth();
-   
-      // Set limits
-      minLeft = containerOffset + 10;
-      maxLeft = containerOffset + containerWidth - dragWidth - 10;
-      
-      // Calculate the dragging distance on mousemove.
-      dragElement.parents().on("mousemove touchmove", function(e) {
-          
-        // Check if it's a mouse or touch event and pass along the correct value
-        var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-        
-        leftValue = moveX + posX - dragWidth;
-        
-        
-        // Prevent going off limits
-        if ( leftValue < minLeft) {
-          leftValue = minLeft;
-        } else if (leftValue > maxLeft) {
-          leftValue = maxLeft;
-        }
 
-        
-        
-        // Translate the handle's left value to masked divs width.
-        widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
-              
-        // Set the new values for the slider and the handle. 
-        // Bind mouseup events to stop dragging.
-        $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
-          $(this).removeClass('draggable');
-          resizeElement.removeClass('resizable');
-        });
-        $('.resizable').css('width', widthValue);
-      }).on('mouseup touchend touchcancel', function(){
-        dragElement.removeClass('draggable');
-        resizeElement.removeClass('resizable');
-      });
-      e.preventDefault();
-    }).on('mouseup touchend touchcancel', function(e){
-      dragElement.removeClass('draggable');
-      resizeElement.removeClass('resizable');
-    });
-
-    dragElement.on("mousemove touchmove", function(e){
-      
-      setTimeout(function(){
-        dragElement.trigger("moved");
-      }, 500);
-      return true;
-      
-    });
-    
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ) {
+      this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
   }
-  
-  
-
-// jQuery.event.special.touchstart = {
-//   setup: function( _, ns, handle ) {
-//       this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-//   }
-// };
-// jQuery.event.special.touchmove = {
-//   setup: function( _, ns, handle ) {
-//       this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-//   }
-// };
-// jQuery.event.special.wheel = {
-//   setup: function( _, ns, handle ){
-//       this.addEventListener("wheel", handle, { passive: true });
-//   }
-// };
-// jQuery.event.special.mousewheel = {
-//   setup: function( _, ns, handle ){
-//       this.addEventListener("mousewheel", handle, { passive: true });
-//   }
-// };
+};
+jQuery.event.special.touchmove = {
+  setup: function( _, ns, handle ) {
+      this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+  }
+};
+jQuery.event.special.wheel = {
+  setup: function( _, ns, handle ){
+      this.addEventListener("wheel", handle, { passive: true });
+  }
+};
+jQuery.event.special.mousewheel = {
+  setup: function( _, ns, handle ){
+      this.addEventListener("mousewheel", handle, { passive: true });
+  }
+};
