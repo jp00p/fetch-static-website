@@ -1,0 +1,58 @@
+<div class="kibble-compare green-bg">
+    <div class="wrapper">
+
+        <div class="intro">
+            <h2 class="wow animate__backInDown">Kibble comparison</h2>
+            <p class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio voluptatibus aperiam. Unde tenetur iure natus reprehenderit, deleniti, eos quod consequuntur aspernatur neque, veniam alias libero doloremque et aliquam provident.</p>
+        </div>
+
+        <div class="cards desktop">
+
+            <div class="card">
+                <h3>Fresh Puploaf</h3>
+                <ul>
+                    <li>Rated safe for both humans & pups</li>
+                    <li>Gentle on sensitive tummies</li>
+                    <li>All-natural ingredients you can pronounce</li>
+                    <li>Allergy-friendly promoting silky, smooth coats</li>
+                    <li>Zero added fillers or preservatives</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Kibble</h3>
+                <ul class="red">
+                    <li>Rated safe for both humans & pups</li>
+                    <li>Gentle on sensitive tummies</li>
+                    <li>All-natural ingredients you can pronounce</li>
+                    <li>Allergy-friendly promoting silky, smooth coats</li>
+                    <li>Zero added fillers or preservatives</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="kibble-table mobile">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><span>Puploaf</span></th>
+                        <th><span>Kibble</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in (1..5) %}
+                    <tr>
+                        <td><div class="text">Rated safe for both humans &amp; pups</div></td>
+                        <td><div class="icon"><i class="fa-solid fa-check"></i></div></td>
+                        <td><div class="icon"><i class="fa-solid fa-xmark"></i></div></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p><a href="#" class="button white">see the nutrition</a></p>
+        </div>
+
+    </div>
+</div>
