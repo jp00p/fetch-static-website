@@ -645,10 +645,9 @@ img {
 }
 .loaf-slider .loaf-content {
   display: none;
-  flex-direction: column;
-}
-.loaf-slider .loaf-content.active {
   display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 @media screen and (max-width: 768px) {
   .loaf-slider .loaf-features {
@@ -657,7 +656,6 @@ img {
     flex-direction: row;
     padding: 0;
     font-size: 12px;
-    display: none !important;
   }
 }
 
@@ -666,8 +664,10 @@ img {
   position: relative;
   width: 800px;
   background: #000;
-  height: 600px;
   margin: 0 auto;
+  height: 600px;
+  align-self: center;
+  justify-content: center;
 }
 .ba-slider .img {
   position: absolute;
@@ -684,6 +684,12 @@ img {
 .ba-slider .fg-image {
   background-image: url("/images/hero2.png");
   width: 5%;
+}
+.ba-slider.beef .bg-image {
+  background-image: url("/images/loaf.jpeg");
+}
+.ba-slider.beef .fg-image {
+  background-image: url("/images/hero4.png");
 }
 .ba-slider .handle {
   position: absolute;
@@ -703,7 +709,7 @@ img {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
-  height: 640px;
+  height: 100%;
   background: white;
   cursor: pointer;
 }

@@ -7,6 +7,8 @@ const activity_levels = {
 
 $(document).ready(function(){
 
+    var controller = new ScrollMagic.Controller()
+
     $("#dog-age, #dog-activity").val(1).trigger("input")
 
     $(".menu-toggle").on("click", function(e){
@@ -100,15 +102,36 @@ $(document).ready(function(){
       $(this).addClass("active")
     });
 
+    var scene = new ScrollMagic.Scene({
+      triggerElement: "#pin-me-1",
+      duration: 1000,
+      offset: 380
+    })
+      .setPin("#pin-me-1")
+      .addTo(controller)
+      .on("progress", function(e){
+        $("#ba-handle").val(e.progress.toFixed(2)*100).trigger("change");
+        $(".fg-img").css("width", e.progress.toFixed(2)*100+"%");
+        if (e.progress < 0.33){
+          $("#pin-me-1 .loaf-features").removeClass("active")
+          $("#pin-me-1 #loaf-features-3").addClass("active")
+        }
+        if (e.progress >= 0.33 && e.progress < 0.66){
+          $("#pin-me-1 .loaf-features").removeClass("active")
+          $("#pin-me-1 #loaf-features-2").addClass("active")
+        }
+        if (e.progress >= 0.66){
+          $("#pin-me-1 .loaf-features").removeClass("active")
+          $("#pin-me-1 #loaf-features-3").addClass("active")
+        }
+      });
+
+
     $(".loaf-selector a").on('click', function(e){
       e.preventDefault();
-      let section = $(this).data("content")
-      console.log(section)
-      $(".loaf-content").removeClass("active")
-      $(".loaf-slider #"+section).addClass("active")
-      $(".loaf-features").removeClass("active")
-      $(".loaf-slider #"+section+" .loaf-features:first").addClass("active")
-      initSliders();  
+      let meat_type = $(this).data("content")
+      $("#pin-me-1 .ba-slider").removeClass("turkey beef").addClass(meat_type)
+
     });
 
     $(".faqs .entry").on("click", function(e){
@@ -158,22 +181,22 @@ $(document).ready(function(){
         $(".main-nav").removeClass("scrolled");
       }
 
-      $(".ba-slider").each(function(){
-        let cur = $(this)
-        let start = cur.offset().top - 400;
-        let length = cur.height() + 200;
-        let handle = $("#ba-handle", cur)
-        let fg = $(".fg-img", cur)
-        let finish = start + length;
-        if (scrollpos >= start && scrollpos < finish){
+      // $(".ba-slider").each(function(){
+      //   let cur = $(this)
+      //   let start = cur.offset().top - 400;
+      //   let length = cur.height() + 200;
+      //   let handle = $("#ba-handle", cur)
+      //   let fg = $(".fg-img", cur)
+      //   let finish = start + length;
+      //   if (scrollpos >= start && scrollpos < finish){
           
-          let p = (scrollpos-start)/(length)*100
-          handle.val(p).trigger("change")
-          fg.css('width', `${p}%`);
+      //     let p = (scrollpos-start)/(length)*100
+      //     handle.val(p).trigger("change")
+      //     fg.css('width', `${p}%`);
           
 
-        }
-      })
+      //   }
+      // })
       
 
     });
