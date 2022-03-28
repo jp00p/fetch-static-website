@@ -50,13 +50,43 @@
                         <p>INGREDIENTS: Ground Beef, Brown Rice, Sweet Potato, Breadcrumbs, Carrots, Peas, Diced Tomatoes, Apple, Egg, Beef Liver, Apple Cider VInegar, Nutritional Yeast, Rosemary, Chef Canine Complete 2 (Vitamins and Nutrients)</p>
                     </div>
                     <div class="nutrition-icons">
-                        {% for i in (1..6) %}
+                        
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/beef.png">
+                            <h3>Ground beef</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        {% endfor %}
+
+                        <div class="icon">
+                            <img src="/images/product/liver.png">
+                            <h3>Beef liver</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+
+                        <div class="icon">
+                            <img src="/images/product/kale.png">
+                            <h3>Kale</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+
+                        <div class="icon">
+                            <img src="/images/product/apple.png">
+                            <h3>Apples</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+
+                        <div class="icon">
+                            <img src="/images/product/rice.png">
+                            <h3>Brown rice</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+
+                        <div class="icon">
+                            <img src="/images/product/chefs_canine.png">
+                            <h3>Chef’s Canine</h3>
+                            <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -113,8 +143,19 @@
             <div class="feature feeding-guide" id="feeding">
                 <div class="intro-text">
                     <h2>Feeding guide</h2>
-                    <p>Enclosed you’ll find the Puploaf you selected, along with a Fetch cutting board (handwash only) to assist with portion control. Based on Vinny’s weight, size and activity level you should cut a <strong>1 1/8 inch slice per meal</strong>, assuming you feed Vinny twice a day. Feed hot or cold!</p>
-                    <p><strong>We suggest a 7 day transition period.</strong> This will allow your dog’s stomach to adjust to the new diet. If you notice your dog’s poop is runny, stay on that transition stage for an extra 2 days, or until their poop is back to normal.</p>
+                    <p>
+                        In your first order you will find the Puploaf you selected, along with a
+    Fetch cutting board (handwash only) to assist with portion control. Based
+    on Vinny’s weight, size and activity level you should cut a 1 1/8 inch slice
+    per meal, assuming you feed Vinny twice a day. Feed hot or cold!
+                    </p>
+
+<p>
+    <strong>We suggest a 7 day transition period.</strong> This will allow your dog’s stomach
+    to adjust to the new diet. If you notice your dog’s poop is runny, stay on
+    that transition stage for an extra 2 days, or until their poop is back to
+    normal.
+</p>
                 </div>
                 <div class="charts">
                     
@@ -168,17 +209,77 @@
                 <h2>FAQ</h2>
 
                 <div class="faqs">
-                    {% for i in (1..6) %}
-                    <div class="entry {% if i == 1 %}active{% endif %}">
+                    
+                    <div class="entry active">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>How is your food fresh?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            Our focus is feeding our pup friends in the Pacific Northwest where we can safely deliver fresh. We source our ingredients from local vendors whenever possible. We produce our Puploaf bi-weekly and deliver on Tuesdays and Wednesdays. The Puploaf will be delivered chilled (NOT frozen), and ready to be placed in your refrigerator.
                         </div>
                     </div>
-                    {% endfor %}
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>Where do we deliver?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            We now deliver throughout Oregon and most of Washington where we can safely deliver your pup's food fresh.
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>Where do your ingredients come from?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            We live and work in Portland and believe in supporting our local protein suppliers and farmers. We source our quality meats for the beef and turkey Puploaf from local meat companies. All of our vegetables, fruits, herbs and eggs will always come from local farmers when in season and locally owned distributors.
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>How did Fetch create the Puploaf recipes?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Our Puploaf recipes are the result of multiple experiments of different flavors working in conjunction with our board-certified veterinary nutritionist. Each recipe was carefully formulated to meet the nutritional values established by the AAFCO Dog Food Nutrient Profiles for adult dogs. And lastly, Portland dogs had to approve the great taste!
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>Should I refrigerate and freeze my Puploaf?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Yes, keep refrigerated. Our food is fresh and does not contain preservatives. We recommend that you place the Puploaf you will not use in the first 7 days into the freezer.
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>What if my pup wants to send the plate back to the kitchen?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Our chefs would hate to see this happen, but we will always stand behind the quality of our product and delivery. Please send us a message to hello@feedfetch.com and we will send you free samples of our other flavors to try and satisfy your best friend. If that does not work or is not of interest to you, we will refund your order and invite you to donate any leftover food to a local shelter
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>Can I adjust my subscription at any time?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Yes, you can adjust your subscription any time with respect to the desired Puploaf flavor on your account page. We ask that any changes in the Puploaf flavor be made the Sunday night before your next delivery at 6pm. This way we can ensure we have all of the ingredients necessary to meet your pup’s needs. Should you cancel your pup’s meal plan, you can do so on the account page                        
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -192,17 +293,47 @@
                 <h2>Why Fetch? Benefits you see that they taste</h2>
             </div>
             <div class="cards">
-                {% for i in (1..4) %}
+                
                 <div class="card">
                     <div class="image">
-                        <img src="/images/hero2.png">
+                        <img src="/images/product/fetch_product_healthier_pup.jpg">
                     </div>
                     <div class="content">
                         <h4>Healthier Pup</h4>
                         <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                     </div>
                 </div>
-                {% endfor %}
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/product/fetch_product_longer_life.jpg">
+                    </div>
+                    <div class="content">
+                        <h4>Longer Life</h4>
+                        <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/product/fetch_product_more_energy.jpg">
+                    </div>
+                    <div class="content">
+                        <h4>More Energy</h4>
+                        <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image">
+                        <img src="/images/product/fetch_product_healthy_coat_fur.jpg">
+                    </div>
+                    <div class="content">
+                        <h4>Healthy Coat &amp; Gut</h4>
+                        <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -213,15 +344,15 @@
                 <div class="text">
                     <h2 class="wow animate__flipInX">What's in your first box?</h2>
                     <ul>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
+                        <li>Your choice of Puploaf</li>
+                        <li>Fetch cutting board</li>
+                        <li>Meal transition guide</li>
+                        <li>Cooling pack to ensure freshness</li>
                     </ul>
                 </div>
             </div>
-            <div class="image blue-bg" style="background-image:url(/images/hero2.png)">
-                <img src="/images/hero2.png">
+            <div class="image blue-bg" style="background-image:url(/images/product/fetch_product_in_box.jpg)">
+                <img src="/images/product/fetch_product_in_box.jpg">
             </div>
         </div>
     </div>

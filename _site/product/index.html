@@ -400,6 +400,7 @@
                 
                 </div>
                 <script src="https://dfrnc.com/lib/morph3.min.js"></script>
+                
                 <script>
                 gsap.set('#mouseAn', {opacity: 1})
                 
@@ -534,17 +535,19 @@
     <div class="wrapper">
         <div class="intro">
             <h2><span class="green dog-name-label" id="dog-name-label">Your dog's</span>&nbsp;Meal Plan</h2>
-            <p>Your doggo is one of a kind. That’s why our personalized meal plans are specially tailored to your pup’s needs, so you can feed them tasty food as wonderful as they are.</p>
+            <p>Your pup is one of a kind. That's why our personalized meal plans are specially tailored to your dog's needs, so you can feed them tasty food as wonderful as they are. <strong>Fetch chefs prepare 2 weeks of fresh food that ships to your door within 48 hours of cooking.</strong></p>
         </div>
         <div class="calc-form">
     <form method="GET">
         <div class="column">
+            
             <div class="form-input">
                 <label>
                     <div>What is your dog's name?</div>
                     <input type="text" id="dog-name">
                 </label>
             </div>
+
             <div class="form-input" id="zip-input">
                 <label>
                     <div>What is your zip code?</div>
@@ -552,6 +555,27 @@
                 </label>
                 <div class="error-text"></div>
             </div>
+
+            <div class="form-input" id="weight-input">
+                <label>
+                    <div>How much does your dog weigh?</div>
+                    <input type="number" min="1" max="150" id="dog-weight">
+                </label>
+                <div class="error-text"></div>
+            </div>
+            
+            
+        </div>
+
+        <div class="column">
+        
+            <div class="form-input">
+                <label>
+                    <div>What kind of dog?</div>
+                    <input type="text">
+                </label>
+            </div>
+
             <div class="form-input">
                 <label>
                     <div>How old is your dog?</div>
@@ -559,21 +583,9 @@
                 </label>
                 <span id="age-label">1 years</span>
             </div>
-        </div>
-        <div class="column">
-            <div class="form-input">
-                <label>
-                    <div>What kind of dog?</div>
-                    <input type="text">
-                </label>
-            </div>
-            <div class="form-input" id="weight-input">
-                <label>
-                    <div>How much does your dog weigh?</div>
-                    <input type="number" min="1" max="250" id="dog-weight">
-                </label>
-                <div class="error-text"></div>
-            </div>
+
+            
+
             <div class="form-input">
                 <label>
                     <div>How active is your dog?</div>
@@ -581,7 +593,11 @@
                 </label>
                 <span id="activity-label">Very active</span>
             </div>
+
         </div>
+        
+
+        
         <div class="row">
             <div class="form-input">
                 <label>
@@ -680,7 +696,7 @@
             <div class="card popular">
                 <div class="image">
                     <div class="pill">most popular!</div>
-                    <img src="/images/card-top.png">
+                    <img src="/images/product/turkey.png">
                 </div>
                 <div class="content">
                     <div class="pricing">
@@ -696,7 +712,7 @@
             <div class="card">
                 <div class="image">
                     <div class="pill">economic!</div>
-                    <img src="/images/card-top.png">
+                    <img src="/images/product/topper.png">
                 </div>
                 <div class="content">
                     <div class="pricing">
@@ -704,7 +720,8 @@
                         <h3><span class="green" id="price2">$2.85</span>/day</h3>
                         <h4><span class="green" id="total2">$39.90</span>/delivery period</h4>
                     </div>
-                    <p>Our most wallet-friendly plan serves as a meal booster in addition to your dog's regular food. Delivered fresh bi-weekly.</p>
+                    <p>Our most wallet-friendly plan serves as a meal booster in addition to your dog's
+                    regular food. Delivered fresh bi-weekly.</p>
                     <p>For your dog, a single serving is a 1 1/8 inch slice (45 grams) - 300 calories</p>
                     <p><a href="#" class="button white">add to cart</a></p>
                 </div>
@@ -741,38 +758,38 @@
                     <div class="nutrition-icons">
                         
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/beef.png">
+                            <h3>Ground beef</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        
+
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/liver.png">
+                            <h3>Beef liver</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        
+
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/kale.png">
+                            <h3>Kale</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        
+
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/apple.png">
+                            <h3>Apples</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        
+
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/rice.png">
+                            <h3>Brown rice</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
-                        
+
                         <div class="icon">
-                            <img src="/images/beef-icon_on.png">
-                            <h3>Meat-first recipes</h3>
+                            <img src="/images/product/chefs_canine.png">
+                            <h3>Chef’s Canine</h3>
                             <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                         </div>
                         
@@ -863,8 +880,19 @@
             <div class="feature feeding-guide" id="feeding">
                 <div class="intro-text">
                     <h2>Feeding guide</h2>
-                    <p>Enclosed you’ll find the Puploaf you selected, along with a Fetch cutting board (handwash only) to assist with portion control. Based on Vinny’s weight, size and activity level you should cut a <strong>1 1/8 inch slice per meal</strong>, assuming you feed Vinny twice a day. Feed hot or cold!</p>
-                    <p><strong>We suggest a 7 day transition period.</strong> This will allow your dog’s stomach to adjust to the new diet. If you notice your dog’s poop is runny, stay on that transition stage for an extra 2 days, or until their poop is back to normal.</p>
+                    <p>
+                        In your first order you will find the Puploaf you selected, along with a
+    Fetch cutting board (handwash only) to assist with portion control. Based
+    on Vinny’s weight, size and activity level you should cut a 1 1/8 inch slice
+    per meal, assuming you feed Vinny twice a day. Feed hot or cold!
+                    </p>
+
+<p>
+    <strong>We suggest a 7 day transition period.</strong> This will allow your dog’s stomach
+    to adjust to the new diet. If you notice your dog’s poop is runny, stay on
+    that transition stage for an extra 2 days, or until their poop is back to
+    normal.
+</p>
                 </div>
                 <div class="charts">
                     
@@ -921,61 +949,71 @@
                     
                     <div class="entry active">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>How is your food fresh?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            Our focus is feeding our pup friends in the Pacific Northwest where we can safely deliver fresh. We source our ingredients from local vendors whenever possible. We produce our Puploaf bi-weekly and deliver on Tuesdays and Wednesdays. The Puploaf will be delivered chilled (NOT frozen), and ready to be placed in your refrigerator.
                         </div>
                     </div>
-                    
-                    <div class="entry ">
+
+                    <div class="entry">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>Where do we deliver?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            We now deliver throughout Oregon and most of Washington where we can safely deliver your pup's food fresh.
                         </div>
                     </div>
-                    
-                    <div class="entry ">
+
+                    <div class="entry">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>Where do your ingredients come from?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            We live and work in Portland and believe in supporting our local protein suppliers and farmers. We source our quality meats for the beef and turkey Puploaf from local meat companies. All of our vegetables, fruits, herbs and eggs will always come from local farmers when in season and locally owned distributors.
                         </div>
                     </div>
-                    
-                    <div class="entry ">
+
+                    <div class="entry">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>How did Fetch create the Puploaf recipes?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            Our Puploaf recipes are the result of multiple experiments of different flavors working in conjunction with our board-certified veterinary nutritionist. Each recipe was carefully formulated to meet the nutritional values established by the AAFCO Dog Food Nutrient Profiles for adult dogs. And lastly, Portland dogs had to approve the great taste!
                         </div>
                     </div>
-                    
-                    <div class="entry ">
+
+                    <div class="entry">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>Should I refrigerate and freeze my Puploaf?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            Yes, keep refrigerated. Our food is fresh and does not contain preservatives. We recommend that you place the Puploaf you will not use in the first 7 days into the freezer.
                         </div>
                     </div>
-                    
-                    <div class="entry ">
+
+                    <div class="entry">
                         <div class="question">
-                            <span>What if I have a question that I need answered?</span>
+                            <span>What if my pup wants to send the plate back to the kitchen?</span>
                             <span><i class="fa-solid fa-caret-down"></i></span>
                         </div>
                         <div class="answer">
-                            Feeding your dog Puploaf will give them life, help them prosper, and prevent disease and obesity. Every loaf is made fresh with protein, vegetables, grains, and a vitamin and mineral blend to give your dog everything they need.
+                            Our chefs would hate to see this happen, but we will always stand behind the quality of our product and delivery. Please send us a message to hello@feedfetch.com and we will send you free samples of our other flavors to try and satisfy your best friend. If that does not work or is not of interest to you, we will refund your order and invite you to donate any leftover food to a local shelter
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <div class="question">
+                            <span>Can I adjust my subscription at any time?</span>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="answer">
+                            Yes, you can adjust your subscription any time with respect to the desired Puploaf flavor on your account page. We ask that any changes in the Puploaf flavor be made the Sunday night before your next delivery at 6pm. This way we can ensure we have all of the ingredients necessary to meet your pup’s needs. Should you cancel your pup’s meal plan, you can do so on the account page                        
                         </div>
                     </div>
                     
@@ -995,40 +1033,40 @@
                 
                 <div class="card">
                     <div class="image">
-                        <img src="/images/hero2.png">
+                        <img src="/images/product/fetch_product_healthier_pup.jpg">
                     </div>
                     <div class="content">
                         <h4>Healthier Pup</h4>
                         <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="image">
-                        <img src="/images/hero2.png">
+                        <img src="/images/product/fetch_product_longer_life.jpg">
                     </div>
                     <div class="content">
-                        <h4>Healthier Pup</h4>
+                        <h4>Longer Life</h4>
                         <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="image">
-                        <img src="/images/hero2.png">
+                        <img src="/images/product/fetch_product_more_energy.jpg">
                     </div>
                     <div class="content">
-                        <h4>Healthier Pup</h4>
+                        <h4>More Energy</h4>
                         <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <div class="image">
-                        <img src="/images/hero2.png">
+                        <img src="/images/product/fetch_product_healthy_coat_fur.jpg">
                     </div>
                     <div class="content">
-                        <h4>Healthier Pup</h4>
+                        <h4>Healthy Coat &amp; Gut</h4>
                         <p>Our meals are made using the freshest ingredients to increase your pup's health and wellness through amazing food.</p>
                     </div>
                 </div>
@@ -1043,15 +1081,15 @@
                 <div class="text">
                     <h2 class="wow animate__flipInX">What's in your first box?</h2>
                     <ul>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
-                        <li>Your choice of puploaf</li>
+                        <li>Your choice of Puploaf</li>
+                        <li>Fetch cutting board</li>
+                        <li>Meal transition guide</li>
+                        <li>Cooling pack to ensure freshness</li>
                     </ul>
                 </div>
             </div>
-            <div class="image blue-bg" style="background-image:url(/images/hero2.png)">
-                <img src="/images/hero2.png">
+            <div class="image blue-bg" style="background-image:url(/images/product/fetch_product_in_box.jpg)">
+                <img src="/images/product/fetch_product_in_box.jpg">
             </div>
         </div>
     </div>
@@ -1061,8 +1099,7 @@
 
         <div class="intro">
             <h2 class="wow animate__backInDown">Pups are barking, parents are talking</h2>
-            <p>These are the stories of pups just like yours who love Fetch.</p>
-            <p>Want to see your dog here? Leave a review, tag us or use <span class="green">#FetchPDX</span></p>
+            <p>These are the stories of pups just like yours who love Fetch! Want to see your dog here? Leave a review, tag us or use <span class="green">#feedfetch</span>.</p>
         </div>
 
         <div class="slider">
@@ -1074,63 +1111,82 @@
                 
                 <div class="slide">
                     <div class="image">
-                        <img src="/images/dog2.png">
+                        <img src="/images/reviews/Lisa-Sandoval-Picture-scaled.webp">
                     </div>
                     <div class="content">
-                        <p><strong>Slide 1 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
+                        <p><strong>Lisa &amp; Kobe</strong></p>
+                        <p>&ldquo;Kobe is absolutely loving his new food from Fetch!
+                        It's truly incredible to see him, day after day, running to his
+                        bowl for meals. I've even started taking a little bits of
+                        Fetch loaf out on walks for training because it's grabs his
+                        attention so well.&rdquo;</p>
                     </div>
                 </div>
-                
+
                 <div class="slide">
                     <div class="image">
-                        <img src="/images/dog2.png">
+                        <img src="/images/reviews/Heath-Carpenter-and-Walter.webp">
                     </div>
                     <div class="content">
-                        <p><strong>Slide 2 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
+                        <p><strong>Heath &amp; Walter</strong></p>
+                        <p>
+                            &ldquo;Fetch has been a GAME CHANGER for our
+                            Labradoodle Walter! The second we start preparing his
+                            food he runs to his “dinner table” and can't wait to eat.
+                            They have healthy, farm fresh Beef or Turkey options to
+                            choose from, which keeps Walter on his toes! We also love
+                            the portion control cutting board, 2-week fresh delivery,
+                            and the Customer Service is 5-stars!&rdquo;
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="slide">
                     <div class="image">
-                        <img src="/images/dog2.png">
+                        <img src="/images/reviews/Taylor _ Chip.webp">
                     </div>
                     <div class="content">
-                        <p><strong>Slide 3 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
+                        <p><strong>Taylor &amp; Chip</strong></p>
+                        <p>
+                            &ldquo;Fetch to the rescue. We had tried everything, and even our "fancy" dog food was no appeal to Chip as he reluctantly consumed it at the end of the day. Enter Fetch, dog food so good you could easily mistake it for my Mom's meatloaf. (I mean that as a compliment!) Fresh twice a month, delicious, nutritious and best of all, convenient. The idea of fresh food always seemed great, but was never practical to get. Fetch brings amazingly generous sized, freshly made food straight to our door for a great price.&rdquo;</p>
                     </div>
                 </div>
-                
+
                 <div class="slide">
                     <div class="image">
-                        <img src="/images/dog2.png">
+                        <img src="/images/reviews/Mary _ Roxie.webp">
                     </div>
                     <div class="content">
-                        <p><strong>Slide 4 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
+                        <p><strong>Mary &amp; Roxie</strong></p>
+                        <p>
+                            &ldquo;Roxie loves Fetch! She barrels down the stairs to
+                            eat it when I put it out. Easier to prepare than the previous
+                            food which required mixing with warm water. Just slice on
+                            the handy (and cute!) cutting board. Glad we switched to
+                            Fetch!&rdquo;
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="slide">
                     <div class="image">
-                        <img src="/images/dog2.png">
+                        <img src="/images/reviews/Sandy-Pradas-and-Chloe.webp">
                     </div>
                     <div class="content">
-                        <p><strong>Slide 5 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
+                        <p><strong>Sandy &amp; Chloe</strong></p>
+                        <p>
+                            &ldquo;We love Fetch! Chloe is a very picky eater, and her
+                            vet does not want her on a grain-free diet because of her
+                            breed. It was very difficult to find high quality food that
+                            met all of the requirements, and I was going to a lot of
+                            trouble, expense, and waste. Fetch solved all of my
+                            problems at once. Chloe loves the taste and has not had
+                            any stomach issues since she's been on Fetch.&rdquo;
+                        </p>
                     </div>
                 </div>
+
                 
-                <div class="slide">
-                    <div class="image">
-                        <img src="/images/dog2.png">
-                    </div>
-                    <div class="content">
-                        <p><strong>Slide 6 </strong></p>
-                        <p>We love Fetch! And our dog Fido does too. We feed him twice a day with Fetch Beef Puploaf from our Fetch Fresh plan and his fur has gotten a whole new shine to it as he grows into his adult years.</p>
-                    </div>
-                </div>
                 
                 
             </div>
@@ -1355,8 +1411,8 @@
     
 
     <div class="footer-top">
-    <div>
-        <img src="/images/footer-dogs.jpg">
+    <div class="wow animate__fadeInUpBig">
+        <img src="/images/fetch_footer.jpg">
     </div>
 </div>
 
@@ -1416,6 +1472,7 @@
 <script src="/js/plugins/before-after.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="/js/plugins/wow.min.js"></script>
+
 <script>
     var wow = new WOW(
     {

@@ -1,12 +1,14 @@
 <div class="calc-form">
     <form method="GET">
         <div class="column">
+            
             <div class="form-input">
                 <label>
                     <div>What is your dog's name?</div>
                     <input type="text" id="dog-name">
                 </label>
             </div>
+
             <div class="form-input" id="zip-input">
                 <label>
                     <div>What is your zip code?</div>
@@ -14,6 +16,27 @@
                 </label>
                 <div class="error-text"></div>
             </div>
+
+            <div class="form-input" id="weight-input">
+                <label>
+                    <div>How much does your dog weigh?</div>
+                    <input type="number" min="1" max="150" id="dog-weight">
+                </label>
+                <div class="error-text"></div>
+            </div>
+            
+            
+        </div>
+
+        <div class="column">
+        
+            <div class="form-input">
+                <label>
+                    <div>What kind of dog?</div>
+                    <input type="text">
+                </label>
+            </div>
+
             <div class="form-input">
                 <label>
                     <div>How old is your dog?</div>
@@ -21,21 +44,9 @@
                 </label>
                 <span id="age-label">1 years</span>
             </div>
-        </div>
-        <div class="column">
-            <div class="form-input">
-                <label>
-                    <div>What kind of dog?</div>
-                    <input type="text">
-                </label>
-            </div>
-            <div class="form-input" id="weight-input">
-                <label>
-                    <div>How much does your dog weigh?</div>
-                    <input type="number" min="1" max="250" id="dog-weight">
-                </label>
-                <div class="error-text"></div>
-            </div>
+
+            
+
             <div class="form-input">
                 <label>
                     <div>How active is your dog?</div>
@@ -43,7 +54,11 @@
                 </label>
                 <span id="activity-label">Very active</span>
             </div>
+
         </div>
+        
+
+        
         <div class="row">
             <div class="form-input">
                 <label>
@@ -80,7 +95,7 @@
             <div class="card popular">
                 <div class="image">
                     <div class="pill">most popular!</div>
-                    <img src="/images/card-top.png">
+                    <img src="/images/product/turkey.png">
                 </div>
                 <div class="content">
                     <div class="pricing">
@@ -96,7 +111,7 @@
             <div class="card">
                 <div class="image">
                     <div class="pill">economic!</div>
-                    <img src="/images/card-top.png">
+                    <img src="/images/product/topper.png">
                 </div>
                 <div class="content">
                     <div class="pricing">
@@ -104,7 +119,8 @@
                         <h3><span class="green" id="price2">$2.85</span>/day</h3>
                         <h4><span class="green" id="total2">$39.90</span>/delivery period</h4>
                     </div>
-                    <p>Our most wallet-friendly plan serves as a meal booster in addition to your dog's regular food. Delivered fresh bi-weekly.</p>
+                    <p>Our most wallet-friendly plan serves as a meal booster in addition to your dog's
+                    regular food. Delivered fresh bi-weekly.</p>
                     <p>For your dog, a single serving is a 1 1/8 inch slice (45 grams) - 300 calories</p>
                     <p><a href="#" class="button white">add to cart</a></p>
                 </div>

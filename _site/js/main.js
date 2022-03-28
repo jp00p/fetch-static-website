@@ -104,7 +104,7 @@ $(document).ready(function(){
 
     var scene = new ScrollMagic.Scene({
       triggerElement: "#pin-me-1",
-      duration: 1000,
+      duration: "150%",
       offset: 380
     })
       .setPin("#pin-me-1")
@@ -125,6 +125,60 @@ $(document).ready(function(){
           $("#pin-me-1 #loaf-features-3").addClass("active")
         }
       });
+
+      
+    var scene2 = new ScrollMagic.Scene({
+      triggerElement: "#pin-me-2",
+      duration: "200%",
+      offset: 380
+    })
+    .setPin("#pin-me-2")
+    .addTo(controller)
+    .on("progress", function(e){
+      if(e.progress < 0.33){
+        $(".timeline #entry-2, #pin-me-2 .image").removeClass("active")
+        $(".timeline #entry-1, #pin-me-2 #img-1").addClass("active")
+      }
+      if(e.progress >= 0.33 && e.progress < 0.66){
+        $(".timeline #entry-3, #pin-me-2 .image").removeClass("active")
+        $(".timeline #entry-2, #pin-me-2 #img-2").addClass("active")
+      }
+      if(e.progress >= 0.66){
+        $("#pin-me-2 .image").removeClass("active")
+        $(".timeline #entry-3, #pin-me-2 #img-3").addClass("active")
+      }
+    });
+
+    var scene3 = new ScrollMagic.Scene({
+      triggerElement: "#pin-me-3",
+      duration: "400%",
+      offset: 380
+    })
+    .setPin("#pin-me-3")
+    .addTo(controller)
+    .on("progress", function(e){
+      $("#cta-handle").val(e.progress.toFixed(2)*100).trigger("change");
+      if(e.progress < 0.2){
+        $("#pin-me-3 .cta-features").removeClass("active");
+        $("#pin-me-3 #cta-features-1").addClass("active");
+      }
+      if(e.progress >= 0.2 && e.progress < 0.4){
+        $("#pin-me-3 .cta-features").removeClass("active");
+        $("#pin-me-3 #cta-features-2").addClass("active");
+      }
+      if(e.progress >= 0.4 && e.progress < 0.6){
+        $("#pin-me-3 .cta-features").removeClass("active");
+        $("#pin-me-3 #cta-features-3").addClass("active");
+      }
+      if(e.progress >= 0.6 && e.progress < 0.8){
+        $("#pin-me-3 .cta-features").removeClass("active");
+        $("#pin-me-3 #cta-features-4").addClass("active");
+      }
+      if(e.progress >= 0.8){
+        $("#pin-me-3 .cta-features").removeClass("active");
+        $("#pin-me-3 #cta-features-5").addClass("active");
+      }
+    });
 
 
     $(".loaf-selector a").on('click', function(e){
@@ -164,11 +218,12 @@ $(document).ready(function(){
     $(".ba-slider").each(function(e){
       let p = $(this);
       
-      $(".handle", this).on("input change", (e)=>{
+      $(".range-handle", this).on("input change", (e)=>{
         console.log("test")
         const sliderPos = e.target.value;
         // Update the width of the foreground image
         $('.fg-image', p).css('width', `${sliderPos}%`)
+        $('.handle', p).css('left', `${sliderPos}%`)
       });
 
     });

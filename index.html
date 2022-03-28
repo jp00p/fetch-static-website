@@ -6,8 +6,8 @@
 
     <div class="hero main-hero">
         <div class="wrapper">
-            <div class="image">
-                <img src="/images/hero.png">
+            <div class="image">                
+                <img src="/images/fetch_home_hero.jpg" alt="Happy fetch test">
             </div>
             <div class="content">
                 <div class="text">
@@ -51,7 +51,8 @@
             <div class="content">
                 <div class="text">
                     <h2 class="wow animate__flipInX">What's in your dog bowl?</h2>
-                    <p class="white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A architecto aperiam labore ab aspernatur dicta explicabo asperiores? Ex minus, accusamus tenetur omnis doloribus ratione odit similique, debitis nisi aliquid non.</p>
+                    <p class="white">Fetch fuels your dog the way nature intended... with nutritious human-grade ingredients so good, they consistently earn two paws up!</p>
+                    <p class="white">Dry, processed dog kibble is not only tasteless: it cuts years off of your dog's life, upsets their tummy, and depletes their energy.</p>
                 </div>
             </div>
             <div class="image blue-bg" style="background-image:url(/images/hero2.png)">
@@ -62,27 +63,38 @@
 
     {% include "partials/feature-slider.liquid" %}
    
-    <div class="hero green-bg">
+    <div class="hero green-bg how-it-works" id="pin-me-2">
         <div class="wrapper">
-            <div class="image" style="background-image:url(/images/hero3.png);">
-                <img src="/images/hero3.png">
-                <div class="hero-bg"></div>
+
+            <div class="image active" id="img-1" style="background-image:url(/images/how-it-works/fetch_home_how_it_works_dog.jpg);">
+                <img src="/images/how-it-works/fetch_home_how_it_works_dog.jpg">
             </div>
+
+            <div class="image" id="img-2" style="background-image:url(/images/how-it-works/fetch_home_how_it_works_fresh.jpg);">
+                <img src="/images/how-it-works/fetch_home_how_it_works_fresh.jpg">
+            </div>
+
+            <div class="image" id="img-3" style="background-image:url(/images/how-it-works/fetch_home_how_it_works_delivery.jpg);">
+                <img src="/images/how-it-works/fetch_home_how_it_works_delivery.jpg">
+            </div>
+
+            
+
             <div class="content">
                 <div class="text">
                     <h2 class="wow animate__flipInX">How it works</h2>
                     <div class="timeline">
-                        <div class="entry wow animate__fadeIn">
+                        <div class="entry active" id="entry-1">
                             <div class="digit"><span>1</span></div> 
-                            <div class="text">Step one Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque veniam minima qui repellat consectetur, obcaecati tempore exercitationem nesciunt. Suscipit aspernatur eveniet maiores repellendus possimus consequatur! Veniam esse dolor sit?</div>
+                            <div class="text"><strong>Tell us about your pup.</strong> Our questionnaire gives our team of experts deep insight into your dog's nutritional needs.</div>
                         </div>
-                        <div class="entry wow animate__fadeIn" data-wow-delay="0.5s">
+                        <div class="entry" id="entry-2">
                             <div class="digit"><span>2</span></div> 
-                            <div class="text">Step two Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque veniam minima qui repellat consectetur, obcaecati tempore exercitationem nesciunt. Suscipit aspernatur eveniet maiores repellendus possimus consequatur! Veniam esse dolor sit?</div>
+                            <div class="text"><strong>Let the magic happen.</strong> Once your order is in, our team of chefs begin cooking your pup's tasty and nutritious meals.</div>
                         </div>
-                        <div class="entry wow animate__fadeIn" data-wow-delay="0.5s">
+                        <div class="entry" id="entry-3">
                             <div class="digit"><span>3</span></div> 
-                            <div class="text">Step three Suscipit aspernatur eveniet maiores repellendus possimus consequatur! Veniam esse dolor sit?</div>
+                            <div class="text"><strong>Cut a slice.</strong> Your customized Puploaf arrives at your doorstep twice a month, cut a slice and see the joy in your pup's eyes.</div>
                         </div>
                     </div>
                 </div>
