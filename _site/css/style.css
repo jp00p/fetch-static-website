@@ -383,8 +383,8 @@ img {
   visibility: hidden;
 }
 .hero .content {
-  padding-top: 133px;
-  padding-bottom: 133px;
+  padding-top: 85px;
+  padding-bottom: 85px;
   padding-left: 100px;
   display: flex;
   align-items: center;
@@ -445,7 +445,7 @@ img {
 }
 
 .review-banner {
-  padding: 2rem 0;
+  padding: 85px 0;
   background: #2FD164;
   color: #fff;
   font-size: 18px;
@@ -496,7 +496,7 @@ img {
 
 .features {
   text-align: center;
-  padding: 3rem 0 133px 0;
+  padding: 85px 0;
 }
 .features .wrapper {
   flex-direction: column;
@@ -614,7 +614,7 @@ img {
 }
 
 .loaf-slider {
-  padding: 150px 0;
+  padding: 85px 0;
   text-align: center;
 }
 .loaf-slider .wrapper {
@@ -739,7 +739,7 @@ img {
 
 .carousel-section {
   text-align: center;
-  padding: 3rem 0;
+  padding: 85px 0;
 }
 .carousel-section .wrapper {
   flex-direction: column;
@@ -828,7 +828,7 @@ img {
 }
 
 .calculator {
-  padding: 3rem 0;
+  padding: 85px 0;
   text-align: center;
 }
 .calculator .wrapper {
@@ -1075,7 +1075,7 @@ img {
 
 .kibble-compare {
   text-align: center;
-  padding: 3rem 0;
+  padding: 85px 0;
 }
 .kibble-compare .wrapper {
   flex-direction: column;
@@ -1180,7 +1180,7 @@ img {
 }
 
 .cta-slider {
-  padding: 3rem 0;
+  padding: 85px 0;
 }
 .cta-slider .wrapper {
   flex-direction: column;
@@ -1267,7 +1267,7 @@ img {
 }
 
 .footer-top {
-  padding: 4rem 0 0 0;
+  padding: 85px 0 0 0;
   position: relative;
   font-size: 0;
   overflow: hidden;
@@ -1278,7 +1278,7 @@ img {
 }
 
 .main-footer {
-  padding: 3rem 0;
+  padding: 85px 0;
   color: #fff;
   position: relative;
   z-index: 10;

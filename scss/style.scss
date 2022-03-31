@@ -9,6 +9,7 @@ $red: #DA2427;
 $blue: #54BCEB;
 $sky: #D8F3FF;
 $lightgray: #FCFCFC;
+$section-padding: 85px 0;
 
 
 
@@ -357,8 +358,8 @@ img { max-width:100%; }
     }
 
     .content {
-        padding-top:133px;
-        padding-bottom:133px;
+        padding-top:85px;
+        padding-bottom:85px;
         padding-left:100px;
         display:flex;
         align-items: center;
@@ -426,7 +427,7 @@ img { max-width:100%; }
 
 
 .review-banner {
-    padding:2rem 0;
+    padding:$section-padding;
     background:$green;
     color:#fff;
     font-size:18px;
@@ -478,7 +479,7 @@ img { max-width:100%; }
 
 .features {
     text-align: center;
-    padding:3rem 0 133px 0;
+    padding:$section-padding;
     .wrapper {
         flex-direction: column;
     }
@@ -594,7 +595,7 @@ img { max-width:100%; }
 }
 
 .loaf-slider {
-    padding:150px 0;
+    padding:$section-padding;
     text-align:center;
     .wrapper {
         flex-direction: column;
@@ -719,7 +720,7 @@ img { max-width:100%; }
 
 .carousel-section {
     text-align: center;
-    padding:3rem 0;
+    padding:$section-padding;
     .wrapper {
         flex-direction: column;
     }
@@ -796,7 +797,7 @@ img { max-width:100%; }
 }
 
 .calculator {
-    padding:3rem 0;
+    padding:$section-padding;
     text-align: center;
     .wrapper {
         flex-direction: column;
@@ -1045,7 +1046,7 @@ img { max-width:100%; }
 
 .kibble-compare {
     text-align: center;
-    padding:3rem 0;
+    padding:$section-padding;
     .wrapper {
         flex-direction: column;
     }
@@ -1153,7 +1154,7 @@ img { max-width:100%; }
 }
 
 .cta-slider {
-    padding:3rem 0;
+    padding:$section-padding;
     .wrapper {
         flex-direction: column;
     }
@@ -1239,7 +1240,7 @@ img { max-width:100%; }
 
 
 .footer-top {
-    padding:4rem 0 0 0;
+    padding:85px 0 0 0;
     position:relative;
     font-size:0;
     overflow: hidden;
@@ -1250,7 +1251,7 @@ img { max-width:100%; }
 }
 
 .main-footer {
-    padding:3rem 0;
+    padding:$section-padding;
     color:#fff;
     position: relative;
     z-index:10;
